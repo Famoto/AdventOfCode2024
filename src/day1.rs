@@ -14,7 +14,6 @@ fn parse(input: &str) -> (Vec<u32>, Vec<u32>) {
 }
 #[aoc(day1, part1)]
 fn day1_part1((left, right): &(Vec<u32>, Vec<u32>)) -> u32 {
-
     let mut left = left.clone();
     let mut right = right.clone();
 
@@ -40,9 +39,7 @@ fn day1_part2((left, right): &(Vec<u32>, Vec<u32>)) -> u32 {
     }
 
     // Calculate the similarity score
-    left.iter()
-        .map(|&num| num * frequency[num as usize])
-        .sum()
+    left.iter().map(|&num| num * frequency[num as usize]).sum()
 }
 
 #[cfg(test)]
@@ -52,8 +49,7 @@ mod tests {
 
     #[test]
     fn part1_example() {
-        const SAMPLE: &str = indoc!
-        {"3   4
+        const SAMPLE: &str = indoc! {"3   4
         4   3
         2   5
         1   3
@@ -62,15 +58,14 @@ mod tests {
         assert_eq!(day1_part1(&parse(SAMPLE)), 11);
     }
 
-#[test]
-fn part2_example() {
-    const SAMPLE: &str = indoc!
-    {"3   4
+    #[test]
+    fn part2_example() {
+        const SAMPLE: &str = indoc! {"3   4
     4   3
     2   5
     1   3
     3   9
     3   3"};
-      assert_eq!(day1_part2(&parse(SAMPLE)), 31);
-  }
+        assert_eq!(day1_part2(&parse(SAMPLE)), 31);
+    }
 }

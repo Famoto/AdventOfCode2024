@@ -9,13 +9,13 @@ fn parse(input: &str) -> Vec<Vec<char>> {
 fn day4_part1(grid: &[Vec<char>]) -> usize {
     // Directions represented as (dx, dy)
     let directions = [
-        (0, 1),  // Horizontal right
-        (0, -1), // Horizontal left
-        (1, 0),  // Vertical down
-        (-1, 0), // Vertical up
-        (1, 1),  // Diagonal ↘
-        (1, -1), // Diagonal ↙
-        (-1, 1), // Diagonal ↗
+        (0, 1),   // Horizontal right
+        (0, -1),  // Horizontal left
+        (1, 0),   // Vertical down
+        (-1, 0),  // Vertical up
+        (1, 1),   // Diagonal ↘
+        (1, -1),  // Diagonal ↙
+        (-1, 1),  // Diagonal ↗
         (-1, -1), // Diagonal ↖
     ];
 
@@ -53,7 +53,6 @@ fn day4_part1(grid: &[Vec<char>]) -> usize {
     count
 }
 
-
 #[aoc(day4, part2)]
 fn day4_part2(grid: &[Vec<char>]) -> usize {
     let mut count = 0;
@@ -86,12 +85,13 @@ fn is_xmas(diag1: (char, char, char), diag2: (char, char, char)) -> bool {
 
 #[cfg(test)]
 mod tests {
+    use indoc::indoc;
     use super::*;
 
     #[test]
     fn part1_example() {
-        const SAMPLE: &str =
-        {"MMMSXXMASM
+        const SAMPLE: &str = indoc! {
+            "MMMSXXMASM
             MSAMXMSMSA
             AMXSXMAAMM
             MSAMASMSMX
@@ -100,15 +100,15 @@ mod tests {
             SMSMSASXSS
             SAXAMASAAA
             MAMMMXMMMM
-            MXMXAXMASX"};
+            MXMXAXMASX"
+        };
 
-
-        assert_eq!(day4_part1(parse(&SAMPLE).borrow()), 18);
+        assert_eq!(day4_part1(&parse(&SAMPLE)), 18);
     }
 
-    fn part1_example() {
-        const SAMPLE: &str =
-            {"MMMSXXMASM
+    fn part2_example() {
+        const SAMPLE: &str = indoc! {
+            "MMMSXXMASM
             MSAMXMSMSA
             AMXSXMAAMM
             MSAMASMSMX
@@ -117,9 +117,9 @@ mod tests {
             SMSMSASXSS
             SAXAMASAAA
             MAMMMXMMMM
-            MXMXAXMASX"};
+            MXMXAXMASX"
+        };
 
-
-        assert_eq!(day4_part1(parse(&SAMPLE).borrow()), 9);
+        assert_eq!(day4_part1(&parse(&SAMPLE)), 9);
     }
 }

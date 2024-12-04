@@ -26,7 +26,7 @@ fn day3_part2(input: &str) -> i32 {
 
     // Process each match in order
     for caps in re.captures_iter(input) {
-        if caps.get(1) {
+        if caps.get(1).is_some() {
             // Handle mul(X,Y) when enabled
             if enabled {
                 let x: i32 = caps[2].parse().unwrap();
@@ -57,7 +57,6 @@ mod tests {
         "};
         assert_eq!(day3_part1(INPUT), 161); // 2*4 + 5*5 + 11*8 + 8*5 = 161
     }
-
 
     #[test]
     fn part2_example() {

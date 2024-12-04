@@ -2,7 +2,11 @@
 fn parse(input: &str) -> Vec<Vec<i32>> {
     input
         .lines()
-        .map(|line| line.split_whitespace().map(|num| num.parse().unwrap()).collect())
+        .map(|line| {
+            line.split_whitespace()
+                .map(|num| num.parse().unwrap())
+                .collect()
+        })
         .collect()
 }
 
@@ -31,7 +35,10 @@ fn is_safe(report: &[i32]) -> bool {
 
 #[aoc(day2, part2)]
 fn day2_part2(reports: &[Vec<i32>]) -> usize {
-    reports.iter().filter(|report| is_safe_with_dampener(report)).count()
+    reports
+        .iter()
+        .filter(|report| is_safe_with_dampener(report))
+        .count()
 }
 
 fn is_safe_with_dampener(report: &[i32]) -> bool {
