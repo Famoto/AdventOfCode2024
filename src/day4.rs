@@ -85,8 +85,8 @@ fn is_xmas(diag1: (char, char, char), diag2: (char, char, char)) -> bool {
 
 #[cfg(test)]
 mod tests {
-    use indoc::indoc;
     use super::*;
+    use indoc::indoc;
 
     #[test]
     fn part1_example() {
