@@ -20,7 +20,7 @@ fn parse(input: &str) -> (Vec<(usize, usize)>, Vec<Vec<usize>>) {
 }
 
 #[aoc(day5, part1)]
-fn part1(input: &(Vec<(usize, usize)>, Vec<Vec<usize>>)) -> usize {
+fn day5_part1(input: &(Vec<(usize, usize)>, Vec<Vec<usize>>)) -> usize {
     let (rules, updates) = input;
 
     // Build adjacency list for rules
@@ -45,7 +45,7 @@ fn part1(input: &(Vec<(usize, usize)>, Vec<Vec<usize>>)) -> usize {
 }
 
 #[aoc(day5, part2)]
-fn part2(input: &(Vec<(usize, usize)>, Vec<Vec<usize>>)) -> usize {
+fn day5_part2(input: &(Vec<(usize, usize)>, Vec<Vec<usize>>)) -> usize {
     let (rules, updates) = input;
 
     // Build adjacency list for rules
@@ -146,7 +146,7 @@ mod tests {
     use indoc::indoc;
 
     #[test]
-    fn example_part1() {
+    fn part1_example() {
         let input = indoc! {
 "47|53
 97|13
@@ -177,10 +177,10 @@ mod tests {
 61,13,29
 97,13,75,29,47"
         };
-        assert_eq!(part1(&parse(input)), 143);
+        assert_eq!(day5_part1(&parse(input)), 143);
     }
     #[test]
-    fn example_part2() {
+    fn part2_example() {
         let input = indoc! {
 "47|53
 97|13
@@ -211,6 +211,6 @@ mod tests {
 61,13,29
 97,13,75,29,47"
         };
-        assert_eq!(part2(&parse(input)), 123);
+        assert_eq!(day5_part2(&parse(input)), 123);
     }
 }
