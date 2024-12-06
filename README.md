@@ -12,13 +12,13 @@ My solutions to [Advent of Code](https://adventofcode.com) puzzles.
 <tr><th>Day</th><th>Part 1 Performance</th><th>Part 2 Performance</th></tr>
 <tr><td>
 
-| D  | Puzzle                                                    |               Code               |
-|:--:|-----------------------------------------------------------|:--------------------------------:|
+| D  | Puzzle                                                    |           Code           |
+|:--:|-----------------------------------------------------------|:------------------------:|
 | 1  | [Historian Hysteria](https://adventofcode.com/2024/day/1) |  [day1.rs](src/day1.rs)  |
 | 2  | [Red-Nosed Reports](https://adventofcode.com/2024/day/2)  |  [day2.rs](src/day2.rs)  |
 | 3  | [Mull It Over](https://adventofcode.com/2024/day/3)       |  [day3.rs](src/day3.rs)  |
 | 4  | [Ceres Search](https://adventofcode.com/2024/day/4)       |  [day4.rs](src/day4.rs)  |
-| 5  | [?](https://adventofcode.com/2024/day/5)                  |  [day5.rs](src/day5.rs)  |
+| 5  | [Print Queue](https://adventofcode.com/2024/day/5)        |  [day5.rs](src/day5.rs)  |
 | 6  | [?](https://adventofcode.com/2024/day/6)                  |  [day6.rs](src/day6.rs)  |
 | 7  | [?](https://adventofcode.com/2024/day/7)                  |  [day7.rs](src/day7.rs)  |
 | 8  | [?](https://adventofcode.com/2024/day/8)                  |  [day8.rs](src/day8.rs)  |
@@ -48,7 +48,7 @@ My solutions to [Advent of Code](https://adventofcode.com) puzzles.
 | 187.815 µs | 37.451 µs  |
 |     --     | 612.367 µs |
 |  31.82 µs  | 255.242µs  |
-|     ?      |     ?      |
+| 866.267 µs | 38.273 ms  |
 |     ?      |     ?      |
 |     ?      |     ?      |
 |     ?      |     ?      |
@@ -78,7 +78,7 @@ My solutions to [Advent of Code](https://adventofcode.com) puzzles.
 | 141.617 µs | 219.144 µs |
 |     --     | 601.015 µs |
 | 30.167 µs  | 114.336 µs |
-|     ?      |     ?      |
+| 833.887 µs | 55.487 ms  |
 |     ?      |     ?      |
 |     ?      |     ?      |
 |     ?      |     ?      |

@@ -106,6 +106,7 @@ mod tests {
         assert_eq!(day4_part1(&parse(&SAMPLE)), 18);
     }
 
+    #[test]
     fn part2_example() {
         const SAMPLE: &str = indoc! {
             "MMMSXXMASM
@@ -120,6 +121,6 @@ mod tests {
             MXMXAXMASX"
         };
 
-        assert_eq!(day4_part1(&parse(&SAMPLE)), 9);
+        assert_eq!(day4_part2(&parse(&SAMPLE)), 9);
     }
 }
