@@ -17,7 +17,7 @@ fn parse(input: &str) -> (Vec<Vec<char>>, Vec<(usize, usize, char)>) {
 }
 
 #[aoc(day8, part1)]
-fn part1(input: &(Vec<Vec<char>>, Vec<(usize, usize, char)>)) -> usize {
+fn day8_part1(input: &(Vec<Vec<char>>, Vec<(usize, usize, char)>)) -> usize {
     let (map, antennas) = input;
     let rows = map.len();
     let cols = map[0].len();
@@ -61,7 +61,7 @@ fn part1(input: &(Vec<Vec<char>>, Vec<(usize, usize, char)>)) -> usize {
 }
 
 #[aoc(day8, part2)]
-fn part2(input: &(Vec<Vec<char>>, Vec<(usize, usize, char)>)) -> usize {
+fn day8_part2(input: &(Vec<Vec<char>>, Vec<(usize, usize, char)>)) -> usize {
     let (map, antennas) = input;
     let rows = map.len();
     let cols = map[0].len();
@@ -226,7 +226,7 @@ mod tests {
          ............
          ............"
         };
-        assert_eq!(part1(&parse(input)), 14);
+        assert_eq!(day8_part1(&parse(input)), 14);
     }
 
     fn example_part2() {
@@ -245,6 +245,6 @@ mod tests {
          ............"
         };
         let (map, antennas) = parse(input);
-        assert_eq!(part2(&(map, antennas)), 34);
+        assert_eq!(day8_part2(&(map, antennas)), 34);
     }
 }

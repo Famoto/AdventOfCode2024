@@ -15,7 +15,7 @@ fn parse(input: &str) -> Vec<(usize, Vec<usize>)> {
 }
 
 #[aoc(day7, part1)]
-fn part1(equations: &[(usize, Vec<usize>)]) -> usize {
+fn day7_part1(equations: &[(usize, Vec<usize>)]) -> usize {
     equations
         .iter()
         .filter(|(target, numbers)| can_form_target(*target, numbers))
@@ -24,7 +24,7 @@ fn part1(equations: &[(usize, Vec<usize>)]) -> usize {
 }
 
 #[aoc(day7, part2)]
-fn part2(equations: &[(usize, Vec<usize>)]) -> usize {
+fn day7_part2(equations: &[(usize, Vec<usize>)]) -> usize {
     equations
         .iter()
         .filter(|(target, numbers)| can_form_target_with_concat(*target, numbers))
@@ -145,7 +145,7 @@ mod tests {
          21037: 9 7 18 13
          292: 11 6 16 20"
         };
-        assert_eq!(part1(&parse(input)), 3749);
+        assert_eq!(day7_part1(&parse(input)), 3749);
     }
 
     #[test]
@@ -164,6 +164,6 @@ mod tests {
 
         // With concatenation considered, three more equations become possible,
         // making the total 11387.
-        assert_eq!(part2(&parse(input)), 11387);
+        assert_eq!(day7_part2(&parse(input)), 11387);
     }
 }
