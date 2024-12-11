@@ -55,7 +55,7 @@ fn day6_part2(input: &(Vec<Vec<char>>, (usize, usize), Dir)) -> usize {
     let mut map = original_map.clone();
     map[*sx][*sy] = '.'; // Replace the guard symbol with '.'
 
-    let mut candidates = find_candidate_cells_fast(&map, (*sx, *sy), *sdir);
+    let candidates = find_candidate_cells_fast(&map, (*sx, *sy), *sdir);
 
     // Use a counter to keep track of valid obstructions
     let mut count = 0;
